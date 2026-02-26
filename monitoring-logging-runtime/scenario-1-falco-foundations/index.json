@@ -8,7 +8,8 @@
     "steps": [
       {
         "title": "Deploy Falco Using the Official Manifest",
-        "text": "step1.md"
+        "text": "step1.md",
+        "verify": "scripts/verify1.sh"
       },
       {
         "title": "Trigger and Inspect Falco Alerts",
