@@ -1,117 +1,62 @@
-## `step1.md`
 
+# Step 1 – Deploy Falco Using Helm
 
-# Step 1 – Deploy Falco Using the Official Manifest
-
-In this step, you will:
-
-1. Verify Kubernetes access.
-2. Deploy Falco using the official upstream Kubernetes manifest.
-3. Verify that the Falco pods are running.
-4. Inspect initial Falco logs.
+In this step, deploy Falco into the Kubernetes cluster using the official Helm chart.
 
 ---
 
-## 1. Verify Kubernetes Access
+## 1. Add the Official Falco Helm Repository
 
-First, confirm that your cluster is available and ready.
-
-Check the node:
+Add the Falco charts repository and update it:
 
 ```bash
-
-kubectl get nodes
-```
-You should see one node in `Ready` state.
-
-Check system pods:
-
-```bash
-kubectl get pods -A
-```
-
-This confirms that `kubectl` is correctly configured.
+helm repo add falcosecurity https://falcosecurity.github.io/charts
+helm repo update
+````
 
 ---
 
-## 2. Deploy Falco Using the Official Manifest
+## 2. Install Falco
 
-Falco provides an official Kubernetes DaemonSet manifest in its GitHub repository.
-
-Apply it directly from the source:
+Install Falco into a dedicated namespace called `falco`:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/falcosecurity/falco/master/deploy/kubernetes/falco-daemonset.yaml
+helm install falco \
+  --namespace falco \
+  --create-namespace \
+  --set tty=true \
+  falcosecurity/falco
 ```
 
-This will create:
+This will:
 
-* A `falco` namespace
-* ServiceAccount and RBAC resources
-* ConfigMap
-* DaemonSet
-* Falco pods (one per node)
-
-You should see multiple resources being created.
+* Create the `falco` namespace
+* Deploy Falco as a DaemonSet (one pod per node)
+* Install required RBAC resources
 
 ---
 
-## 3. Verify Falco Deployment
+## 3. Wait for Falco to Become Ready
 
-Check that the `falco` namespace now exists:
-
-```bash
-kubectl get namespaces
-```
-
-Then check Falco pods:
+Check the Falco pods:
 
 ```bash
 kubectl get pods -n falco
 ```
 
-You should see a pod similar to:
+Falco may take a few seconds to initialize.
 
-```text
-falco-xxxxx   1/1   Running   0   1m
+Wait until the pod shows:
+
+```
+1/1   Running
 ```
 
-If the pod is in `ContainerCreating`, wait 30–60 seconds and check again.
-
-If it is not running, inspect it:
+You can also wait explicitly:
 
 ```bash
-kubectl describe pod -n falco <falco-pod-name>
+kubectl wait --for=condition=Ready pod --all -n falco
 ```
 
----
+Once the Falco pod is running, proceed to the next step.
 
-## 4. Inspect Falco Logs
-
-Get the Falco pod name:
-
-```bash
-FALCO_POD=$(kubectl get pod -n falco -l app=falco -o jsonpath='{.items[0].metadata.name}')
-echo $FALCO_POD
-```
-
-View recent logs:
-
-```bash
-kubectl logs -n falco $FALCO_POD --tail=50
-```
-
-You should see startup logs indicating:
-
-* Falco version
-* Driver initialization
-* Rules loaded
-* "Falco initialized" message
-
-If everything looks healthy and the pod is running, Falco is now actively monitoring your node.
-
----
-
-You’re ready to generate some runtime activity.
-
-➡ Continue to the next step: **Trigger and Inspect Falco Alerts**
