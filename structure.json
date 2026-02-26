@@ -1,0 +1,36 @@
+{
+  "title": "Certified Kubernetes Security Specialist (CKS)",
+  "description": "Hands-on KillerCoda labs covering all current CKS exam domains.",
+  "items": [
+    {
+      "path": "cluster-setup",
+      "title": "Cluster Setup (15%)",
+      "description": "RBAC, Network Policies, and Security Contexts"
+    },
+    {
+      "path": "cluster-hardening",
+      "title": "Cluster Hardening (15%)",
+      "description": "Secure API Server, Nodes, and Encrypt etcd"
+    },
+    {
+      "path": "system-hardening",
+      "title": "System Hardening (10%)",
+      "description": "Kernel Security and Container Runtime Protection"
+    },
+    {
+      "path": "microservice-vulnerabilities",
+      "title": "Minimize Microservice Vulnerabilities (20%)",
+      "description": "Pod Security, Admission Controllers, and Secrets Management"
+    },
+    {
+      "path": "supply-chain-security",
+      "title": "Supply Chain Security (20%)",
+      "description": "Image Scanning, Signing, and Policy Enforcement"
+    },
+    {
+      "path": "monitoring-logging-runtime",
+      "title": "Monitoring, Logging and Runtime Security (20%)",
+      "description": "Runtime Detection, Audit Logging, and Incident Response"
+    }
+  ]
+}
