@@ -1,13 +1,13 @@
 {
   "title": "Falco Runtime Security – Foundations",
-  "description": "Deploy Falco using the official manifest, trigger runtime detections, and inspect Falco alerts in a Kubernetes cluster.",
+  "description": "Deploy Falco, trigger runtime detections, inspect alerts, and modify Falco rules in an exam-style Kubernetes environment.",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "Deploy Falco Using the Official Manifest",
+        "title": "Deploy Falco Using Helm",
         "text": "step1.md",
         "verify": "scripts/verify1.sh"
       },
@@ -16,7 +16,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Explore Rules, Cleanup and Summary",
+        "title": "Exam Context and Rule Management",
         "text": "step3.md"
       }
     ],
