@@ -55,4 +55,4 @@ By the end of this lab, you will understand:
 
 Proceed to the next step:
 
-➡ **Deploy Falco Using the Official Manifest**
+➡ **Deploy Falco Using the Official Helm chart**
