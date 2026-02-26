@@ -1,0 +1,31 @@
+{
+  "title": "Falco Runtime Security – Foundations",
+  "description": "Deploy Falco using a local manifest, trigger runtime detections, and inspect Falco alerts in a Kubernetes cluster.",
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction",
+        "text": "intro.md"
+      },
+      {
+        "title": "Deploy Falco with a Local Manifest",
+        "text": "step1.md"
+      },
+      {
+        "title": "Trigger and Inspect Falco Alerts",
+        "text": "step2.md"
+      },
+      {
+        "title": "Explore Rules, Cleanup and Summary",
+        "text": "step3.md"
+      },
+      {
+        "title": "Finish",
+        "text": "finish.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm:1.34"
+  }
+}
