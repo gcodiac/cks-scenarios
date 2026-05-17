@@ -5,7 +5,7 @@
 
 ## 🎯 Course Overview
 
-This repository contains a hands-on preparation course for the **Certified Kubernetes Security Specialist (CKS)** exam, built entirely around **interactive KillerCoda scenarios**.
+Hands-on preparation course for the **Certified Kubernetes Security Specialist (CKS)** exam, built entirely around **interactive KillerCoda scenarios**.
 
 The content is aligned with the **current CKS exam blueprint** and focuses on real-world, task-oriented security skills rather than theory. Scenarios are organized by exam domain and will grow over time as the course evolves.
 
