@@ -4,33 +4,33 @@
   "items": [
     {
       "path": "cluster-setup",
-      "title": "Cluster Setup (15%)",
-      "description": "RBAC, Network Policies, and Security Contexts"
+      "title": "Cluster Setup (10%)",
+      "description": "Network Security Policies, CIS Benchmarks, Ingress TLS, node metadata, and platform binary verification"
     },
     {
       "path": "cluster-hardening",
       "title": "Cluster Hardening (15%)",
-      "description": "Secure API Server, Nodes, and Encrypt etcd"
+      "description": "Kubernetes API access, RBAC, service accounts, upgrades, secrets, and security primitives"
     },
     {
       "path": "system-hardening",
-      "title": "System Hardening (10%)",
-      "description": "Kernel Security and Container Runtime Protection"
+      "title": "System Hardening (15%)",
+      "description": "Host OS footprint, IAM, external access, OS configuration, system logs, and container runtime"
     },
     {
       "path": "microservice-vulnerabilities",
       "title": "Minimize Microservice Vulnerabilities (20%)",
-      "description": "Pod Security, Admission Controllers, and Secrets Management"
+      "description": "Namespace isolation, NetworkPolicies, Pod Security Standards, OS security domains, runtime security, audit logging, and pod-to-pod encryption"
     },
     {
       "path": "supply-chain-security",
       "title": "Supply Chain Security (20%)",
-      "description": "Image Scanning, Signing, and Policy Enforcement"
+      "description": "Base image footprint, supply-chain trust, manifest analysis, and image vulnerability scanning"
     },
     {
       "path": "monitoring-logging-runtime",
       "title": "Monitoring, Logging and Runtime Security (20%)",
-      "description": "Runtime Detection, Audit Logging, and Incident Response"
+      "description": "Behavioral analytics, physical infrastructure threats, workload threats, and Kubernetes audit logs"
     }
   ]
 }

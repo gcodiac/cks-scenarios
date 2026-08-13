@@ -1,0 +1,26 @@
+{
+  "title": "Minimize external access – Learn",
+  "description": "Understand the control, inspect the environment, and identify the expected security outcome. Placeholder stage for Minimize external access.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Complete the task",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review the result",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

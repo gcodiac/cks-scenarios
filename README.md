@@ -17,12 +17,12 @@ The course is structured around the official CKS domains and their current weigh
 
 | Domain | Weight (subject to change by CNCF) | Focus Areas (examples) |
 |--------|------------------------------------|-------------------------|
-| **Cluster Setup** | ~15% | RBAC, Network Policies, Security Contexts |
-| **Cluster Hardening** | ~15% | API Server, Node Security, etcd Encryption |
-| **System Hardening** | ~10% | Kernel Security, AppArmor, Seccomp |
-| **Minimize Microservice Vulnerabilities** | ~20% | Pod Security, Admission Controllers, Secrets |
-| **Supply Chain Security** | ~20% | Image Scanning, Signing, Policy Enforcement |
-| **Monitoring, Logging & Runtime Security** | ~20% | Falco, Audit Logging, Incident Response |
+| **Cluster Setup** | ~10% | Network Security Policies, CIS Benchmarks, Ingress TLS, node metadata, platform binaries |
+| **Cluster Hardening** | ~15% | API access, RBAC, service accounts, upgrades, secrets, security primitives |
+| **System Hardening** | ~15% | Host OS footprint, IAM, OS configuration, system logs, container runtime |
+| **Minimize Microservice Vulnerabilities** | ~20% | Namespace isolation, NetworkPolicies, Pod Security, OS security domains, runtime security, audit logging, pod-to-pod encryption |
+| **Supply Chain Security** | ~20% | Base images, supply-chain trust, manifest analysis, image vulnerability scanning |
+| **Monitoring, Logging & Runtime Security** | ~20% | Behavioral Analytics, Physical Infrastructure Threats, Workload Threats, Audit Logs |
 
 > Note: Domain names, weights, and scope may change in future CKS releases. This course will be updated over time to track those changes.
 
@@ -53,84 +53,53 @@ As the course evolves, new scenarios and refinements may be added without changi
 Below is a high-level overview of the scenario themes in each domain.
 Scenario names and counts may grow over time, but the focus areas will remain consistent.
 
-### 🔧 Cluster Setup (~15%)
+### 🔧 Cluster Setup (~10%)
 
 Example scenarios:
 
-- **RBAC Configuration** – Implement fine-grained access control
-- **Network Policies** – Configure network segmentation and traffic control
-- **Security Contexts** – Apply pod and container security constraints
-- **CIS Kubernetes Benchmark** – Assess and remediate Kubernetes configuration against versioned CIS controls
+- **Network Security Policies** – Restrict cluster-level access
+- **CIS Benchmarks** – Review Kubernetes security configuration
+- **Ingress and Egress TLS** – Restrict and encrypt network traffic
+- **Node Metadata and Endpoints** – Protect instance metadata and sensitive endpoints
+- **Platform Binary Verification** – Verify Kubernetes platform binaries
 
 ### 🛡️ Cluster Hardening (~15%)
 
 Example scenarios:
 
-- **API Server Hardening** – Secure API server configuration and authentication
-- **Node Security** – Implement node-level security controls
-- **etcd Encryption** – Configure encryption at rest for sensitive data
+- **Restrict Kubernetes API Access**
+- **RBAC and Service Accounts**
+- **Kubernetes Upgrades**
+- **Secrets and Kubernetes Security Primitives**
 
-### 🔒 System Hardening (~10%)
+### 🔒 System Hardening (~15%)
 
 Example scenarios:
 
-- **Kernel Security** – Implement syscall filtering and kernel hardening
-- **AppArmor & Seccomp** – Configure application and system call security profiles
+- **Host OS Footprint and IAM Roles**
+- **External Access and Host OS Configuration**
+- **System Logs and Container Runtime Security**
 
 ### 🐳 Minimize Microservice Vulnerabilities (~20%)
 
 Example scenarios:
 
-- **Pod Security Standards** – Implement Pod Security Standards and policies
-- **Admission Controllers** – Deploy and use admission webhooks
-- **Secrets Management** – Secure secrets handling and external integration
-- **Container Security** – Apply container image security best practices
+- **Namespace Isolation and NetworkPolicies**
+- **Pod Security Standards**
+- **OS-Level Security Domains** – AppArmor and seccomp
+- **Container Runtime Security**
+- **Audit Logging and Pod-to-Pod Encryption**
 
 ### 📦 Supply Chain Security (~20%)
 
 Example scenarios:
 
-- **Image Scanning** – Automated vulnerability scanning and basic remediation workflows
-- **Image Signing** – Implement signing and verification (e.g. with Cosign)
-- **OPA Gatekeeper** – Policy enforcement with Open Policy Agent
-- **Binary Authorization** – Secure deployment pipelines and attestation concepts
+- **Base Image Footprint**
+- **Supply-Chain Trust and Provenance**
+- **Static Kubernetes Manifest Analysis**
+- **Image Vulnerability Scanning**
 
-```text
-cks/
-└── 01-cluster-setup/
-    │
-    ├── 01-network-security-policies/
-    │   ├── network-security-policies-learn/
-    │   ├── network-security-policies-required/
-    │   ├── network-security-policies-inferno/
-    │   └── network-security-policies-production/
-    │
-    ├── 02-cis-benchmark/
-    │   ├── cis-benchmark-learn/
-    │   ├── cis-benchmark-required/
-    │   ├── cis-benchmark-inferno/
-    │   └── cis-benchmark-production/
-    │
-    ├── 03-ingress-tls/
-    │   ├── ingress-tls-learn/
-    │   ├── ingress-tls-required/
-    │   ├── ingress-tls-inferno/
-    │   └── ingress-tls-production/
-    │
-    ├── 04-node-metadata-endpoints/
-    │   ├── node-metadata-endpoints-learn/
-    │   ├── node-metadata-endpoints-required/
-    │   ├── node-metadata-endpoints-inferno/
-    │   └── node-metadata-endpoints-production/
-    │
-    └── 05-verify-platform-binaries/
-        ├── verify-platform-binaries-learn/
-        ├── verify-platform-binaries-required/
-        ├── verify-platform-binaries-inferno/
-        └── verify-platform-binaries-production/
-```
-
-So the convention throughout the entire CKS course becomes:
+Every syllabus topic follows the same four-stage convention:
 
 ```text
 <topic>-learn
@@ -139,18 +108,18 @@ So the convention throughout the entire CKS course becomes:
 <topic>-production
 ```
 
-The CIS Benchmark progression is implemented at
-`cluster-setup/scenario-2-cis-benchmark/`. It moves from running and interpreting
-`kube-bench`, through workload-policy remediation, to kubeadm control-plane
-hardening and a production assessment process.
+Each top-level topic directory also contains an `index.json`, so it is directly
+discoverable by KillerCoda. The four stage directories contain placeholder
+lessons, questions, checks, and setup hooks that can be replaced with detailed
+content later.
 ### 📊 Monitoring, Logging & Runtime Security (~20%)
 
 Example scenarios:
 
-- **Falco Runtime Security** – Deploy runtime threat detection rules
-- **Audit Logging** – Configure and inspect Kubernetes audit logs
-- **Anomaly Detection** – Behavioral monitoring and detection concepts
-- **Incident Response** – Practice security incident investigation and response
+- **Behavioral Analytics** – Analyze system and workload behavior
+- **Physical Infrastructure Threats** – Detect host-level threats
+- **Workload Threat Detection** – Detect threats inside workloads
+- **Kubernetes Audit Logs** – Configure and use audit logging
 
 ## 🎓 Learning Outcomes
 

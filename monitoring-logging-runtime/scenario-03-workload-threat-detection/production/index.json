@@ -1,0 +1,26 @@
+{
+  "title": "Detect threats within workloads – Production",
+  "description": "Turn the control into an auditable, repeatable production practice. Placeholder stage for Detect threats within workloads.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Complete the task",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review the result",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

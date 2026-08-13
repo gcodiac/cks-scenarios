@@ -1,0 +1,26 @@
+{
+  "title": "Perform static analysis of Kubernetes manifests – Inferno",
+  "description": "Handle a deliberately difficult variant with evidence, least privilege, and safe recovery. Placeholder stage for Perform static analysis of Kubernetes manifests.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Complete the task",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review the result",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Implement pod-to-pod encryption – Required",
+  "description": "Complete the minimum exam-style remediation and verify the resulting control. Placeholder stage for Implement pod-to-pod encryption.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Complete the task",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review the result",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
