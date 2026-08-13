@@ -94,6 +94,49 @@ Example scenarios:
 - **OPA Gatekeeper** – Policy enforcement with Open Policy Agent
 - **Binary Authorization** – Secure deployment pipelines and attestation concepts
 
+```text
+cks/
+└── 01-cluster-setup/
+    │
+    ├── 01-network-security-policies/
+    │   ├── network-security-policies-learn/
+    │   ├── network-security-policies-required/
+    │   ├── network-security-policies-inferno/
+    │   └── network-security-policies-production/
+    │
+    ├── 02-cis-benchmark/
+    │   ├── cis-benchmark-learn/
+    │   ├── cis-benchmark-required/
+    │   ├── cis-benchmark-inferno/
+    │   └── cis-benchmark-production/
+    │
+    ├── 03-ingress-tls/
+    │   ├── ingress-tls-learn/
+    │   ├── ingress-tls-required/
+    │   ├── ingress-tls-inferno/
+    │   └── ingress-tls-production/
+    │
+    ├── 04-node-metadata-endpoints/
+    │   ├── node-metadata-endpoints-learn/
+    │   ├── node-metadata-endpoints-required/
+    │   ├── node-metadata-endpoints-inferno/
+    │   └── node-metadata-endpoints-production/
+    │
+    └── 05-verify-platform-binaries/
+        ├── verify-platform-binaries-learn/
+        ├── verify-platform-binaries-required/
+        ├── verify-platform-binaries-inferno/
+        └── verify-platform-binaries-production/
+```
+
+So the convention throughout the entire CKS course becomes:
+
+```text
+<topic>-learn
+<topic>-required
+<topic>-inferno
+<topic>-production
+```
 ### 📊 Monitoring, Logging & Runtime Security (~20%)
 
 Example scenarios:
@@ -119,7 +162,6 @@ By working through these scenarios, you will be able to:
 
 Contributions, bug reports, and improvements are very welcome.
 
-- See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - Feel free to open issues for:
     - Scenario corrections
     - New scenario ideas
