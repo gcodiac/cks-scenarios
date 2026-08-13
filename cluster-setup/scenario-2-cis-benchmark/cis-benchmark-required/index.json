@@ -1,0 +1,13 @@
+{
+  "title": "CIS Kubernetes Benchmark – Required Remediation",
+  "description": "Remediate common CIS 5.x policy findings: Pod Security, service-account tokens, and default-deny network isolation.",
+  "details": {
+    "intro": { "text": "intro.md" },
+    "steps": [
+      { "title": "Harden the Namespace", "text": "step1.md" },
+      { "title": "Harden the Workload and Network", "text": "step2.md", "verify": "scripts/verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "kubernetes-kubeadm-1node" }
+}

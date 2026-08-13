@@ -60,6 +60,7 @@ Example scenarios:
 - **RBAC Configuration** – Implement fine-grained access control
 - **Network Policies** – Configure network segmentation and traffic control
 - **Security Contexts** – Apply pod and container security constraints
+- **CIS Kubernetes Benchmark** – Assess and remediate Kubernetes configuration against versioned CIS controls
 
 ### 🛡️ Cluster Hardening (~15%)
 
@@ -137,6 +138,11 @@ So the convention throughout the entire CKS course becomes:
 <topic>-inferno
 <topic>-production
 ```
+
+The CIS Benchmark progression is implemented at
+`cluster-setup/scenario-2-cis-benchmark/`. It moves from running and interpreting
+`kube-bench`, through workload-policy remediation, to kubeadm control-plane
+hardening and a production assessment process.
 ### 📊 Monitoring, Logging & Runtime Security (~20%)
 
 Example scenarios:

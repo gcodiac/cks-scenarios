@@ -1,0 +1,13 @@
+{
+  "title": "CIS Kubernetes Benchmark – Production Program",
+  "description": "Turn CIS assessment results into a repeatable production control: version pinning, evidence, exceptions, remediation, and continuous review.",
+  "details": {
+    "intro": { "text": "intro.md" },
+    "steps": [
+      { "title": "Create an Assessment Record", "text": "step1.md" },
+      { "title": "Automate Review and Exceptions", "text": "step2.md", "verify": "scripts/verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "kubernetes-kubeadm-1node" }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "CIS Kubernetes Benchmark – Inferno",
+  "description": "Investigate and remediate high-impact control-plane, etcd, and kubelet configuration findings on a kubeadm node.",
+  "details": {
+    "intro": { "text": "intro.md" },
+    "steps": [
+      { "title": "Investigate the Host", "text": "step1.md" },
+      { "title": "Remediate Control-Plane Flags", "text": "step2.md", "verify": "scripts/verify.sh" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "kubernetes-kubeadm-1node" }
+}
