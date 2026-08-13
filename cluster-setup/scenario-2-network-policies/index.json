@@ -1,0 +1,13 @@
+{
+  "title": "Network Policies",
+  "description": "Configure Kubernetes network segmentation and traffic control.",
+  "details": {
+    "intro": { "text": "intro.md" },
+    "steps": [
+      { "title": "Apply Network Policies", "text": "step1.md" },
+      { "title": "Verify Traffic", "text": "step2.md" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "kubernetes-kubeadm-1node" }
+}

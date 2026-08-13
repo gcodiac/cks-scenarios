@@ -1,0 +1,13 @@
+{
+  "title": "RBAC",
+  "description": "Configure Kubernetes role-based access control.",
+  "details": {
+    "intro": { "text": "intro.md" },
+    "steps": [
+      { "title": "Configure RBAC", "text": "step1.md" },
+      { "title": "Verify Access", "text": "step2.md" }
+    ],
+    "finish": { "text": "finish.md" }
+  },
+  "backend": { "imageid": "kubernetes-kubeadm-1node" }
+}
