@@ -1,0 +1,26 @@
+{
+  "title": "Protect Node Metadata and Endpoints – Required",
+  "description": "Required practice lab for the CKS Cluster Setup objective: Protect Node Metadata and Endpoints.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Exam task",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

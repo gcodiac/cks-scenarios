@@ -1,0 +1,26 @@
+{
+  "title": "Use Ingress and Egress Rules to Restrict Network Access with TLS – Production",
+  "description": "Production practice lab for the CKS Cluster Setup objective: Use Ingress and Egress Rules to Restrict Network Access with TLS.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Production tutorial",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

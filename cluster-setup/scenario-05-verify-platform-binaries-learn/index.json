@@ -1,0 +1,26 @@
+{
+  "title": "Verify Platform Binaries – Learn",
+  "description": "Learn practice lab for the CKS Cluster Setup objective: Verify Platform Binaries.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Explore the concept",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

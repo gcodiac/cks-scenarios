@@ -99,7 +99,8 @@ Example scenarios:
 - **Static Kubernetes Manifest Analysis**
 - **Image Vulnerability Scanning**
 
-Every syllabus topic follows the same four-stage convention:
+Every syllabus topic is split into four independent KillerCoda scenarios so
+each stage starts with a fresh environment:
 
 ```text
 <topic>-learn
@@ -108,10 +109,9 @@ Every syllabus topic follows the same four-stage convention:
 <topic>-production
 ```
 
-Each top-level topic directory also contains an `index.json`, so it is directly
-discoverable by KillerCoda. The four stage directories contain placeholder
-lessons, questions, checks, and setup hooks that can be replaced with detailed
-content later.
+Each stage directory contains its own `index.json`, setup script, lessons,
+questions, checks, and finish page. KillerCoda discovers these stage directories
+directly under their CKS domain.
 ### 📊 Monitoring, Logging & Runtime Security (~20%)
 
 Example scenarios:

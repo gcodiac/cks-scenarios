@@ -1,0 +1,26 @@
+{
+  "title": "Use Network Security Policies to Restrict Cluster-Level Access – Inferno",
+  "description": "Inferno practice lab for the CKS Cluster Setup objective: Use Network Security Policies to Restrict Cluster-Level Access.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Deep investigation",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

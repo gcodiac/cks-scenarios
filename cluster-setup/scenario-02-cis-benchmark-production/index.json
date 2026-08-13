@@ -1,0 +1,26 @@
+{
+  "title": "Use CIS Benchmarks to Review Security Configuration – Production",
+  "description": "Production practice lab for the CKS Cluster Setup objective: Use CIS Benchmarks to Review Security Configuration.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Production tutorial",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
