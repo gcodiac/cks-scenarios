@@ -1,0 +1,26 @@
+{
+  "title": "Minimize the host OS footprint – Learn",
+  "description": "Learn practice lab for the CKS objective: Minimize the host OS footprint.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Build the mental model",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

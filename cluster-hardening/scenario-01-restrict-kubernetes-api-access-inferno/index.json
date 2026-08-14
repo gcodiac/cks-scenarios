@@ -1,0 +1,26 @@
+{
+  "title": "Restrict access to the Kubernetes API – Inferno",
+  "description": "Inferno practice lab for the CKS objective: Restrict access to the Kubernetes API.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Deep investigation",
+        "text": "step1.md",
+        "verify": "scripts/verify.sh"
+      },
+      {
+        "title": "Review and reflect",
+        "text": "step2.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
