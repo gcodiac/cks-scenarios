@@ -12,8 +12,16 @@
         "verify": "scripts/verify.sh"
       },
       {
-        "title": "Review and reflect",
+        "title": "Review, hints, and self-check",
         "text": "step2.md"
+      },
+      {
+        "title": "Guided implementation",
+        "text": "step3.md"
+      },
+      {
+        "title": "Verify and hand off",
+        "text": "step4.md"
       }
     ],
     "finish": {

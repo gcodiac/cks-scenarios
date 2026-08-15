@@ -109,9 +109,18 @@ each stage starts with a fresh environment:
 <topic>-production
 ```
 
-Each stage directory contains its own `index.json`, setup script, lessons,
-questions, checks, and finish page. KillerCoda discovers these stage directories
-directly under their CKS domain.
+Each stage directory contains its own `index.json`, setup script, four lesson
+steps, checks, and a finish page. The expanded lesson flow is:
+
+1. Build the mental model or inspect the incident.
+2. Work through a guided implementation with security-focused hints.
+3. Apply the control in a bounded, exam-style sequence.
+4. Verify the enforcement point and write an operational handoff.
+
+The guided lessons use collapsible `<details>` sections for hints and solution
+patterns. Learners can open help when stuck without turning every concept into
+a graded quiz. KillerCoda discovers these stage directories directly under
+their CKS domain.
 ### 📊 Monitoring, Logging & Runtime Security (~20%)
 
 Example scenarios:
